@@ -8,7 +8,16 @@ public class CameraPermaMove : MonoBehaviour
 {
     public float speed;
 
-    [SerializeField] public Rigidbody2D player;
+    [SerializeField] public Rigidbody2D bossLevel;
+
+    [SerializeField] public GameObject bossLevelPlatform;
+    [SerializeField] public GameObject newPlatform1;
+    [SerializeField] public GameObject newPlatform2;
+    [SerializeField] public GameObject newPlatform3;
+    [SerializeField] public GameObject newPlatform4;
+
+    [SerializeField] public GameObject oldPlatform1;
+    [SerializeField] public GameObject oldPlatform2;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +27,32 @@ public class CameraPermaMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.up * speed * Time.deltaTime);
+        var positionY = transform.position.y;
+        // Debug.Log(positionY);
+        if (positionY > bossLevel.transform.position.y)
+        {
+            // Debug.Log("stopped at boss");
+            ActivateBossLevel();
+            DisableLevelPlatforms();
+        }
+        else
+        {
+            transform.Translate(Vector2.up * speed * Time.deltaTime);
+        }
+    }
+
+    private void DisableLevelPlatforms()
+    {
+        oldPlatform1.SetActive(false);
+        oldPlatform2.SetActive(false);
+    }
+
+    private void ActivateBossLevel()
+    {
+        bossLevelPlatform.SetActive(true);
+        newPlatform1.SetActive(true);
+        newPlatform2.SetActive(true);
+        newPlatform3.SetActive(true);
+        newPlatform4.SetActive(true);
     }
 }

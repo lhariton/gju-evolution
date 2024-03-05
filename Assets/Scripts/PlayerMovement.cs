@@ -21,13 +21,15 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
 
         //jump if on ground
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        var jump = Input.GetButtonDown("Jump");
+        if (jump && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
         //jump if in air
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        jump = Input.GetButtonUp("Jump");
+        if (jump && rb.velocity.y > 0f)
         {
             float slowerJump = rb.velocity.y * 0.5f;
             rb.velocity = new Vector2(rb.velocity.x, slowerJump);
