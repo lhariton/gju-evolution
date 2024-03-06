@@ -1465,6 +1465,7 @@ GameObject:
   - component: {fileID: 530935085}
   - component: {fileID: 530935087}
   - component: {fileID: 530935088}
+  - component: {fileID: 530935089}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1622,6 +1623,20 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &530935089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530935081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19cfd2efe3bb5340916c157064ac2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  textBox: {fileID: 0}
 --- !u!1 &544192066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,7 +1942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f5f4ae00b0f5a458c8730b7aae50ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 530935089}
   spawnPoints:
   - projectile: {fileID: 1891331436682432899, guid: 43143201c81430642b17118676550881, type: 3}
     spawnPoint: {fileID: 462649278}
