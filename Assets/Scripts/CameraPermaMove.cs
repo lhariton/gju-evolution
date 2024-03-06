@@ -15,6 +15,7 @@ public class CameraPermaMove : MonoBehaviour
     [SerializeField] public GameObject newPlatform2;
     [SerializeField] public GameObject newPlatform3;
     [SerializeField] public GameObject newPlatform4;
+    [SerializeField] public GameObject spawner;
 
     [SerializeField] public GameObject oldPlatform1;
     [SerializeField] public GameObject oldPlatform2;
@@ -54,5 +55,6 @@ public class CameraPermaMove : MonoBehaviour
         newPlatform2.SetActive(true);
         newPlatform3.SetActive(true);
         newPlatform4.SetActive(true);
+        spawner.SetActive(true);
     }
 }
