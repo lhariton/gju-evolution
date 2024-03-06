@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] private AudioClip dmgAudioClip;
+    [SerializeField] private AudioClip deathAudioClip;
     public int health=10;
     //TODO add health bar
     // public TextMeshProUGUI textBox;
@@ -21,8 +23,9 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         // textBox.text = "HEALTH: " + health;
-        if(health<0)
+        if(health==0)
         {
+            SoundFXManager.instance.PlaySoundFXClip(dmgAudioClip, transform, 1f);
             SceneManager.LoadSceneAsync("DeathScene");
 
         }
@@ -31,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        health-=damage;
+        SoundFXManager.instance.PlaySoundFXClip(dmgAudioClip, transform, 1f);
+        health -=damage;
     }
 }

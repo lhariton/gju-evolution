@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    [SerializeField] private AudioClip jumpAudioClip;
+    [SerializeField] private AudioClip moveAudioClip;
+
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         var jump = Input.GetButtonDown("Jump");
         if (jump && IsGrounded())
         {
+            SoundFXManager.instance.PlaySoundFXClip(jumpAudioClip, transform, 1f);
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
@@ -42,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
         float x = horizontal * speed;
         float y = rb.velocity.y;
         rb.velocity = new Vector2(x, y);
+        //TODO
+        //SoundFXManager.instance.PlaySoundFXClip(moveAudioClip, transform, 1f);
     }
 
     private bool IsGrounded()
