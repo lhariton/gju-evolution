@@ -10,11 +10,14 @@ public class PlayerMovement : MonoBehaviour
 
     public float jumpingPower = 16f;
 
-    private bool isFacingRight = true;
+    private bool isFacingRight = false;
+    private bool isGrounded;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] public Animator animator;
+   
 
     [SerializeField] private AudioClip jumpAudioClip;
     [SerializeField] private AudioClip moveAudioClip;
@@ -22,14 +25,19 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
         //jump if on ground
         var jump = Input.GetButtonDown("Jump");
+        
         if (jump && IsGrounded())
         {
+            animator.SetBool("isJump", true);
+            Debug.Log("jump true");
             SoundFXManager.instance.PlaySoundFXClip(jumpAudioClip, transform, 1f);
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
+
 
         //jump if in air
         jump = Input.GetButtonUp("Jump");
@@ -38,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             float slowerJump = rb.velocity.y * 0.5f;
             rb.velocity = new Vector2(rb.velocity.x, slowerJump);
         }
-
+        
         Flip();
     }
 
@@ -46,6 +54,19 @@ public class PlayerMovement : MonoBehaviour
         float x = horizontal * speed;
         float y = rb.velocity.y;
         rb.velocity = new Vector2(x, y);
+
+        var wasGrounded = isGrounded;
+        isGrounded = false;
+        if(IsGrounded())
+        {
+            isGrounded = true;
+            if(!wasGrounded)
+            {
+                animator.SetBool("isJump", false);
+                Debug.Log("jump false");
+
+            }
+        }
         //TODO
         //SoundFXManager.instance.PlaySoundFXClip(moveAudioClip, transform, 1f);
     }

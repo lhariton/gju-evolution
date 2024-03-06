@@ -56,5 +56,10 @@ public class CameraPermaMove : MonoBehaviour
         newPlatform3.SetActive(true);
         newPlatform4.SetActive(true);
         spawner.SetActive(true);
+
+
+        // to send projectiles only in boss fight
+        var spawnerScript = spawner.GetComponent<SpawnerScript>();
+        spawnerScript.isBossFight = true;
     }
 }

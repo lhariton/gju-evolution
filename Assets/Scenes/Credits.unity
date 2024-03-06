@@ -443,16 +443,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Daria Calu
-
-    Madalina-Andreea Vasile
+  m_text: 'Madalina-Andreea Vasile
 
     Daria Geagan
 
-    Robert-Daniel
-    Trotea
+    Robert-Daniel Trotea
 
-    Leonard Hariton
+    Leonard
+    Hariton
 
     Adina Rosca'
   m_isRightToLeft: 0

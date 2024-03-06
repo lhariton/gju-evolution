@@ -8,6 +8,7 @@ public class projectileShoot : MonoBehaviour
     private Rigidbody2D rb;
     public float angle;
     public float speed;
+    public bool isWave;
 
 
     // Start is called before the first frame update
@@ -37,8 +38,11 @@ public class projectileShoot : MonoBehaviour
         {
             playerHealth.takeDamage(1);
             Debug.Log("playerHealth.health " + playerHealth.health);
+            if (!isWave)
+            {
+                Destroy(gameObject);
 
-            Destroy(gameObject);
+            }
         }
     }
 }
