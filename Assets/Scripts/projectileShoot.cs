@@ -31,11 +31,11 @@ public class projectileShoot : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision.gameObject.tag " + collision.gameObject.tag);
-        Debug.Log("gameObject.tag " + gameObject.tag);
+        // Debug.Log("collision.gameObject.tag " + collision.gameObject.tag);
+        // Debug.Log("gameObject.tag " + gameObject.tag);
         if (collision.gameObject.CompareTag("Player"))
         {
-            playerHealth.health--;
+            playerHealth.takeDamage(1);
             Debug.Log("playerHealth.health " + playerHealth.health);
 
             Destroy(gameObject);

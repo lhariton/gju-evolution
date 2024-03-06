@@ -60,4 +60,17 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
+    public IEnumerator Knockback(float knockDuration, float knockbackPower, Vector3 knockbackDirection) {
+        float timer = 0;
+        // Debug.Log("knockback");
+        while (knockDuration > timer) {
+            timer += Time.deltaTime;
+            rb.velocity = new Vector2(0, 0);
+            rb.AddForce(new Vector3(knockbackDirection.x * -200, knockbackDirection.y * knockbackPower, transform.position.z));
+            //TODO add damage animation + sound
+        }
+
+        yield return 0;
+    }
 }

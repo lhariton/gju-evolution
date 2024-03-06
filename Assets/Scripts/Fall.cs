@@ -21,7 +21,7 @@ public class Fall : MonoBehaviour
         var positionY = camera.transform.position.y;
         // Debug.Log(positionY);
         if (positionY > player.transform.position.y + 10) {
-            Debug.Log("works");
+            // Debug.Log("works");
             SceneManager.LoadSceneAsync("Credits");
         }
     }
