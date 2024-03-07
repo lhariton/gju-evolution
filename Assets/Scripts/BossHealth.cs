@@ -6,6 +6,7 @@ public class BossHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     public float health = 3;
+    public Animator animatorPlayer;
     void Start()
     {
         
@@ -16,6 +17,7 @@ public class BossHealth : MonoBehaviour
     {
         if (health <= 0)
         {
+            animatorPlayer.SetBool("isLevelDone", true);
             Destroy(gameObject);
         }
     }
@@ -23,6 +25,7 @@ public class BossHealth : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            //StartCoroutine(playerMovement.Knockback(0.03f, 350, playerMovement.transform.position));
             Debug.Log("Collision with player detected!");
             Debug.Log("Health: " + health);
             health -= 1;
