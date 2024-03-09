@@ -17,6 +17,7 @@ public class CameraPermaMove : MonoBehaviour
     [SerializeField] public GameObject newPlatform4;
     [SerializeField] public GameObject newPlatform5;
     [SerializeField] public GameObject newPlatform6;
+    [SerializeField] public GameObject newPlatform7;
     [SerializeField] public GameObject spawner;
 
     [SerializeField] public GameObject oldPlatform1;
@@ -37,6 +38,7 @@ public class CameraPermaMove : MonoBehaviour
             // Debug.Log("stopped at boss");
             ActivateBossLevel();
             DisableLevelPlatforms();
+            Camera.main.orthographicSize = 380f;
         }
         else
         {
@@ -59,7 +61,8 @@ public class CameraPermaMove : MonoBehaviour
         newPlatform4.SetActive(true);
         newPlatform5.SetActive(true);
         newPlatform6.SetActive(true);
-        spawner.SetActive(true);
+        newPlatform7.SetActive(true);
+        // spawner.SetActive(true);
 
 
         // to send projectiles only in boss fight

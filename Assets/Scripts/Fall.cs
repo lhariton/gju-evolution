@@ -19,7 +19,7 @@ public class Fall : MonoBehaviour
     void Update()
     {
         var positionY = camera.transform.position.y;
-        Debug.Log(positionY + " : " + player.transform.position.y);
+        // Debug.Log(positionY + " : " + player.transform.position.y);
         if (positionY - 250 > player.transform.position.y) {
             // Debug.Log("works");
             SceneManager.LoadSceneAsync("DeathScene");
