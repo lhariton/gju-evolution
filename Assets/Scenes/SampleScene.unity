@@ -2218,6 +2218,9 @@ MonoBehaviour:
   newPlatform2: {fileID: 1076060164}
   newPlatform3: {fileID: 963668819}
   newPlatform4: {fileID: 2069625577}
+  newPlatform5: {fileID: 0}
+  newPlatform6: {fileID: 0}
+  newPlatform7: {fileID: 0}
   spawner: {fileID: 664059449}
   oldPlatform1: {fileID: 286068837}
   oldPlatform2: {fileID: 1296241226}
@@ -2393,7 +2396,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  animator: {fileID: 530935090}
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
   jumpAudioClip: {fileID: 8300000, guid: 264304ad55167e648b4cae325a62aec5, type: 3}
   moveAudioClip: {fileID: 0}
 --- !u!114 &530935089
@@ -2421,7 +2425,7 @@ Animator:
   m_GameObject: {fileID: 530935081}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d8d0ac5b4eb7aff4088b155b3a25beed, type: 2}
+  m_Controller: {fileID: 9100000, guid: 379d2c60dee1a5144b46555ebddb26a7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3221,7 +3225,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 15.475, y: 8.5, z: 0}
+  m_ChunkCullingBounds: {x: 319, y: 179.5, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -7231,6 +7235,7 @@ GameObject:
   - component: {fileID: 1818418293}
   - component: {fileID: 1818418292}
   - component: {fileID: 1818418291}
+  - component: {fileID: 1818418295}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -7247,8 +7252,8 @@ Transform:
   m_GameObject: {fileID: 1818418289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.432, y: 3.28, z: 0}
-  m_LocalScale: {x: 0.25, y: 1, z: 1}
+  m_LocalPosition: {x: 3.206, y: 3.32, z: 0}
+  m_LocalScale: {x: 0.0872, y: 0.3488, z: 0.3488}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2108814701}
@@ -7328,18 +7333,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.31540298, y: -0.07979298}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 7.15, y: 3.94}
+    newSize: {x: 7.15, y: 3.94}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.8921986, y: 3.2696157}
   m_EdgeRadius: 0
 --- !u!212 &1818418294
 SpriteRenderer:
@@ -7382,17 +7387,38 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5754717, g: 0, b: 0.36302388, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3bbf7742f9d000a418a0ca5efdbc8c9f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 7.15, y: 3.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1818418295
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818418289}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9571279f4424a2649afb921f3acf1270, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1833551621
 GameObject:
   m_ObjectHideFlags: 0
@@ -7406,6 +7432,7 @@ GameObject:
   - component: {fileID: 1833551624}
   - component: {fileID: 1833551625}
   - component: {fileID: 1833551626}
+  - component: {fileID: 1833551627}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -7454,12 +7481,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.053014517, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3bf2d0602c3d05f47b563ce8219d8af5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 17.54, y: 13.69}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7474,7 +7501,7 @@ Transform:
   m_GameObject: {fileID: 1833551621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10.16, y: -4.08, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7519,8 +7546,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe6c6e32d9300e46b8f1eab6fb01f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmgAudioClip: {fileID: 0}
+  deathAudioClip: {fileID: 0}
   health: 3
-  animatorPlayer: {fileID: 530935090}
+  animatorPlayer: {fileID: 0}
 --- !u!61 &1833551626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7556,9 +7585,9 @@ BoxCollider2D:
   m_Offset: {x: -0.02701497, y: 0.5265088}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 17.54, y: 13.69}
+    newSize: {x: 17.54, y: 13.69}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -7566,6 +7595,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.40566945, y: 0.36964893}
   m_EdgeRadius: 0
+--- !u!95 &1833551627
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833551621}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfcf6fdb09548244bbe1915be877ac22, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1847276237
 GameObject:
   m_ObjectHideFlags: 0
