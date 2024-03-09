@@ -78,7 +78,14 @@ public class GameManager : MonoBehaviour
         GameObject player = getPlayer(activeScene);
         if (player != null) {
             // player.GetComponent<ParticleSystem>().Emit(20);
-            player.GetComponent<Animator>().Play("Omida_Transform");
+            if (activeScene.buildIndex == 1)
+            {
+                player.GetComponent<Animator>().Play("Omida_Transform");
+            } else if (activeScene.buildIndex == 2)
+            {
+                player.GetComponent<Animator>().Play("Cocoon_Transform");
+
+            }
         }
     }
 

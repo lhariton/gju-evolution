@@ -31,9 +31,9 @@ public class BossHealth : MonoBehaviour
         {
             //StartCoroutine(playerMovement.Knockback(0.03f, 350, playerMovement.transform.position));
             Debug.Log("Collision with player detected!");
-            Debug.Log("Health: " + health);
             SoundFXManager.instance.PlaySoundFXClip(dmgAudioClip, transform, 1f);
             health -= 1;
+            Debug.Log("Health: " + health);
         }
     }
     //private void OnCollisionEnter2D(Collision2D collision)
