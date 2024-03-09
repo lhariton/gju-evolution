@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (jump && IsGrounded())
         {
             animator.SetBool("isJump", true);
-            Debug.Log("jump true");
+            // Debug.Log("jump true");
             SoundFXManager.instance.PlaySoundFXClip(jumpAudioClip, transform, 1f);
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
             if(!wasGrounded)
             {
                 animator.SetBool("isJump", false);
-                Debug.Log("jump false");
+                // Debug.Log("jump false");
 
             }
         }
