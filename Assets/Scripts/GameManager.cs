@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
                 player.GetComponent<Animator>().Play("Omida_Transform");
             } else if (activeScene.buildIndex == 2)
             {
-                // player.GetComponent<Animator>().Play("Cocoon_Transform");
+                player.GetComponent<Animator>().Play("Cocon_Transform");
 
             }
         }

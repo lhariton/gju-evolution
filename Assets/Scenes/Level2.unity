@@ -11342,6 +11342,7 @@ GameObject:
   - component: {fileID: 1989272774}
   - component: {fileID: 1989272772}
   - component: {fileID: 1989272771}
+  - component: {fileID: 1989272775}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -11423,7 +11424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmgAudioClip: {fileID: 8300000, guid: b0ce8e92670e07b4e8e320055cf16edc, type: 3}
   deathAudioClip: {fileID: 8300000, guid: 684ee04035998004891daed4d47606d5, type: 3}
-  health: 1
+  health: 3
   animatorPlayer: {fileID: 1689455493}
 --- !u!212 &1989272774
 SpriteRenderer:
@@ -11477,6 +11478,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1989272775
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989272769}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfcf6fdb09548244bbe1915be877ac22, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2040336082
 GameObject:
   m_ObjectHideFlags: 0
