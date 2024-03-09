@@ -763,7 +763,7 @@ Transform:
   m_GameObject: {fileID: 167619144}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.851, y: 4.7, z: -0.20271531}
+  m_LocalPosition: {x: -1.04, y: 15.6, z: -0.20271531}
   m_LocalScale: {x: 0.118875, y: 0.4755, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -809,7 +809,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.22593632, g: 0.09803921, b: 1, a: 1}
   m_FlipX: 0
@@ -2185,7 +2185,7 @@ Transform:
   m_GameObject: {fileID: 300873766}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.267, y: 1.43, z: -0.20271531}
+  m_LocalPosition: {x: 2.43, y: 1.43, z: -0.20271531}
   m_LocalScale: {x: 0.118875, y: 0.4755, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2231,7 +2231,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.22593632, g: 0.09803921, b: 1, a: 1}
   m_FlipX: 0
@@ -4626,7 +4626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &659557623
 Transform:
   m_ObjectHideFlags: 0
@@ -4636,7 +4636,7 @@ Transform:
   m_GameObject: {fileID: 659557622}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.079, y: 1.46, z: -0.20271531}
+  m_LocalPosition: {x: -1.079, y: -7.6, z: -0.20271531}
   m_LocalScale: {x: 0.118875, y: 0.4755, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4682,7 +4682,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.22593632, g: 0.09803921, b: 1, a: 1}
   m_FlipX: 0
@@ -6533,7 +6533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1173555505
 Transform:
   m_ObjectHideFlags: 0
@@ -6543,7 +6543,7 @@ Transform:
   m_GameObject: {fileID: 1173555504}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.733, y: 1.17, z: -0.20271531}
+  m_LocalPosition: {x: 5.85, y: -22.1, z: -0.20271531}
   m_LocalScale: {x: 0.118875, y: 0.4755, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6589,7 +6589,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.22593632, g: 0.09803921, b: 1, a: 1}
   m_FlipX: 0
@@ -6746,7 +6746,7 @@ Transform:
   m_GameObject: {fileID: 1284098466}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.416, y: -2.959999, z: 0}
+  m_LocalPosition: {x: -6.4, y: 6.2, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6769,39 +6769,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f5f4ae00b0f5a458c8730b7aae50ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 1689455494}
   spawnPoints:
   - projectile: {fileID: 1891331436682432899, guid: 43143201c81430642b17118676550881, type: 3}
     spawnPoint: {fileID: 300873767}
     nextSpawn: 0
     angle: -135
-    speed: 5
+    speed: 50
   - projectile: {fileID: 1891331436682432899, guid: 43143201c81430642b17118676550881, type: 3}
     spawnPoint: {fileID: 1965404961}
     nextSpawn: 0
-    angle: -150
-    speed: 3
+    angle: -60
+    speed: 50
   - projectile: {fileID: 1891331436682432899, guid: 43143201c81430642b17118676550881, type: 3}
     spawnPoint: {fileID: 659557623}
     nextSpawn: 0
-    angle: -45
-    speed: 7
+    angle: -90
+    speed: 50
   - projectile: {fileID: 1891331436682432899, guid: 43143201c81430642b17118676550881, type: 3}
     spawnPoint: {fileID: 1173555505}
     nextSpawn: 0
-    angle: -90
-    speed: 4
+    angle: -170
+    speed: 50
   - projectile: {fileID: 1891331436682432899, guid: 43143201c81430642b17118676550881, type: 3}
     spawnPoint: {fileID: 300873767}
-    nextSpawn: 0
-    angle: 0
-    speed: 4
+    nextSpawn: 5
+    angle: -90
+    speed: 100
   waveAttack:
     projectile: {fileID: 3235637259268383080, guid: 0343e9b1209361c4c8018d26b931ceb5, type: 3}
     spawnPoint: {fileID: 167619145}
-    speed: 5
-    spawnTimeForWave: 5
-  isBossFight: 0
+    speed: 100
+    spawnTimeForWave: 20
+  isBossFight: 1
 --- !u!1 &1328822774
 GameObject:
   m_ObjectHideFlags: 0
@@ -11222,7 +11222,7 @@ Transform:
   m_GameObject: {fileID: 1965404960}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.061, y: 0.39, z: -0.20271531}
+  m_LocalPosition: {x: -4.52, y: -2.8, z: -0.20271531}
   m_LocalScale: {x: 0.118875, y: 0.4755, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11268,7 +11268,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.22593632, g: 0.09803921, b: 1, a: 1}
   m_FlipX: 0

@@ -22,6 +22,7 @@ public class CameraPermaMove : MonoBehaviour
 
     [SerializeField] public GameObject oldPlatform1;
     [SerializeField] public GameObject oldPlatform2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +63,7 @@ public class CameraPermaMove : MonoBehaviour
         newPlatform5.SetActive(true);
         newPlatform6.SetActive(true);
         newPlatform7.SetActive(true);
-        // spawner.SetActive(true);
+        spawner.SetActive(true);
 
 
         // to send projectiles only in boss fight
