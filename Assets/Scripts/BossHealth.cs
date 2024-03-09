@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour
 {
+    [SerializeField] private AudioClip dmgAudioClip;
+    [SerializeField] private AudioClip deathAudioClip;
     // Start is called before the first frame update
     public float health = 3;
     public Animator animatorPlayer;
@@ -19,9 +21,8 @@ public class BossHealth : MonoBehaviour
         if (health <= 0)
         {
             animatorPlayer.SetBool("isLevelDone", true);
+            SoundFXManager.instance.PlaySoundFXClip(dmgAudioClip, transform, 1f);
             Destroy(gameObject);
-            //WaitForSeconds(2);
-            SceneManager.LoadSceneAsync("Credits");
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,6 +32,7 @@ public class BossHealth : MonoBehaviour
             //StartCoroutine(playerMovement.Knockback(0.03f, 350, playerMovement.transform.position));
             Debug.Log("Collision with player detected!");
             Debug.Log("Health: " + health);
+            SoundFXManager.instance.PlaySoundFXClip(dmgAudioClip, transform, 1f);
             health -= 1;
         }
     }
