@@ -19,7 +19,7 @@ public class Spike : MonoBehaviour
         {
             // Debug.Log("SPIKE!");
             playerHealth.takeDamage(1);
-            StartCoroutine(playerMovement.Knockback(0.03f, 350, playerMovement.transform.position));
+            StartCoroutine(playerMovement.Knockback(0.03f, 12, playerMovement.transform.position));
         }
     }
 

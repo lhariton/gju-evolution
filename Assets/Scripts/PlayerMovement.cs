@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
 
-    public float speed = 8f;
+    public float speed = 16f;
 
-    public float jumpingPower = 16f;
+    public float jumpingPower = 32f;
 
     private bool isFacingRight = false;
     private bool isGrounded;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] public Animator animator;
    
 
@@ -90,14 +92,22 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator Knockback(float knockDuration, float knockbackPower, Vector3 knockbackDirection) {
         float timer = 0;
+        // Color originColor = spriteRenderer.color;
+
+        // tint the sprite with damage color
+        // spriteRenderer.color = Color.red;
+
+        // spriteRenderer.color = Color.Lerp(Color.red, originColor, knockDuration);
         // Debug.Log("knockback");
         while (knockDuration > timer) {
             timer += Time.deltaTime;
             rb.velocity = new Vector2(0, 0);
-            rb.AddForce(new Vector3(knockbackDirection.x * -200, knockbackDirection.y * knockbackPower, transform.position.z));
+            rb.AddForce(new Vector3(knockbackDirection.x * -100, knockbackDirection.y * knockbackPower, transform.position.z));
             //TODO add damage animation + sound
         }
+        // spriteRenderer.color = originColor;
 
         yield return 0;
+        
     }
 }

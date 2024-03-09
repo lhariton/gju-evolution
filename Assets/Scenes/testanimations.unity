@@ -1585,7 +1585,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 9
+  orthographic size: 24
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1803,8 +1803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84008a7add0e5934badd1c9e5e2d5c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  jumpingPower: 20
+  speed: 16
+  jumpingPower: 32
   rb: {fileID: 530935085}
   groundCheck: {fileID: 2133812271}
   groundLayer:
@@ -1838,7 +1838,7 @@ Animator:
   m_GameObject: {fileID: 530935081}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 379d2c60dee1a5144b46555ebddb26a7, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8d0ac5b4eb7aff4088b155b3a25beed, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4344,7 +4344,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 750127610}
