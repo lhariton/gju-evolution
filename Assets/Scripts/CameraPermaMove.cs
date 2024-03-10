@@ -85,12 +85,11 @@ public class CameraPermaMove : MonoBehaviour
         if (!activeScene.name.Contains("3"))
         {
             spawnBossPlatforms();
-
-            spawner.SetActive(true);
-            // to send projectiles only in boss fight
-            var spawnerScript = spawner.GetComponent<SpawnerScript>();
-            spawnerScript.isBossFight = true;
         }
+        spawner.SetActive(true);
+        // to send projectiles only in boss fight
+        var spawnerScript = spawner.GetComponent<SpawnerScript>();
+        spawnerScript.isBossFight = true;
     }
 
     private void spawnBossPlatforms()

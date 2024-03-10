@@ -21,7 +21,7 @@ public class Fall : MonoBehaviour
     {
         var positionY = camera.transform.position.y;
         // Debug.Log(positionY + " : " + player.transform.position.y);
-        if (positionY - 1280 > player.transform.position.y) {
+        if (positionY - 560 > player.transform.position.y) {
             // Debug.Log("works");
             SoundFXManager.instance.PlaySoundFXClip(DeathAudioClip, transform, 1f);
             SceneManager.LoadSceneAsync("DeathScene");
