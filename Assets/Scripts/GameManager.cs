@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject pausePanel;
 
-    private int maxScenes = 2;
+    private int maxScenes = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +48,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerator playerVictory(Scene activeScene, float delay) {
         yield return new WaitForSeconds(delay);
-
         
         changLevel(activeScene);
     }

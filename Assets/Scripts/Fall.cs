@@ -7,6 +7,7 @@ public class Fall : MonoBehaviour
 {
     [SerializeField] public Rigidbody2D player;
     [SerializeField] public Camera camera;
+    [SerializeField] public AudioClip DeathAudioClip;
 
 
     // Use this for initialization
@@ -20,8 +21,9 @@ public class Fall : MonoBehaviour
     {
         var positionY = camera.transform.position.y;
         // Debug.Log(positionY + " : " + player.transform.position.y);
-        if (positionY - 250 > player.transform.position.y) {
+        if (positionY - 1280 > player.transform.position.y) {
             // Debug.Log("works");
+            SoundFXManager.instance.PlaySoundFXClip(DeathAudioClip, transform, 1f);
             SceneManager.LoadSceneAsync("DeathScene");
         }
     }

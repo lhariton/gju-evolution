@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
         //jump if on ground
         var jump = Input.GetButtonDown("Jump");
-        
+        // Debug.Log("jump");
         if (jump && IsGrounded())
         {
             animator.SetBool("isJump", true);

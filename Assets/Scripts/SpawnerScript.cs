@@ -78,7 +78,7 @@ public class SpawnerScript : MonoBehaviour
                 rb.velocity = velocityDirection.normalized * sp.speed;
 
                 var script = InstantiatedProjectile.GetComponent<projectileShoot>();
-                script.angle = sp.angle;
+                script.angle = sp.angle * Random.Range(-2f, 2f);
                 script.speed = sp.speed;
                 script.playerHealth = playerHealth;
                 script.isWave = false;
