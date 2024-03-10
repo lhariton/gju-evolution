@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
     private void checkGameState() {
         if (Input.GetKeyDown("escape")) {
             var timeScale = Time.timeScale;
-            print(timeScale);
+            // Debug.Log(timeScale + "-"+pausePanel.ToString());
             if (timeScale == 0) {
                 ResumeGame();
             } else {

@@ -84,11 +84,16 @@ public class CameraPermaMove : MonoBehaviour
         var activeScene = SceneManager.GetActiveScene();
         if (!activeScene.name.Contains("3"))
         {
-            spawnBossStuff();
+            spawnBossPlatforms();
+
+            spawner.SetActive(true);
+            // to send projectiles only in boss fight
+            var spawnerScript = spawner.GetComponent<SpawnerScript>();
+            spawnerScript.isBossFight = true;
         }
     }
 
-    private void spawnBossStuff()
+    private void spawnBossPlatforms()
     {
         newPlatform1.SetActive(true);
         newPlatform2.SetActive(true);
@@ -104,10 +109,5 @@ public class CameraPermaMove : MonoBehaviour
         newPlatform51.SetActive(true);
         newPlatform61.SetActive(true);
         newPlatform71.SetActive(true);
-        spawner.SetActive(true);
-
-        // to send projectiles only in boss fight
-        var spawnerScript = spawner.GetComponent<SpawnerScript>();
-        spawnerScript.isBossFight = true;
     }
 }
